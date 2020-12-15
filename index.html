@@ -126,6 +126,45 @@
                         <div class="kratos-entry-border-new clearfix">
                             
                             <div class="kratos-entry-thumb-new">
+                                <a href="/2020/12/15/%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%86%99%E5%A5%BD%E7%9A%84sql%E8%BF%9B%E8%A1%8C%E6%89%B9%E9%87%8F%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%8B%BC%E6%8E%A5/">
+                                    
+                                        <img class="kratos-entry-thumb-new-img">
+                                    
+                                </a>
+                            </div>
+                            <div class="kratos-post-inner-new">
+                                <header class="kratos-entry-header-new">
+                                        
+                                    <h2 class="kratos-entry-title-new"><a href="/2020/12/15/%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%86%99%E5%A5%BD%E7%9A%84sql%E8%BF%9B%E8%A1%8C%E6%89%B9%E9%87%8F%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%8B%BC%E6%8E%A5/">对数据库写好的sql进行批量格式的拼接</a>
+                                </header>
+                                <div class="kratos-entry-content-new">
+                                    <p>
+                                        
+                                            对数据库写好的sql进行批量格式的拼接
+Quick Start12345678910111213141516171819202122232425262728293031323334353637383940414243444546474...
+                                        
+                                    </p>
+                                </div>
+                            </div>
+                            <footer class="kratos-post-meta-new">
+                                <span class="pull-left">
+                                    <a><i class="fa fa-calendar"></i></a><a>2020-12-15</a>
+                                    <a><i class="fa fa-tags"></i></a>
+                                    
+                                </span>
+                                <span class="pull-right">
+                                    <a class="read-more" href="/2020/12/15/%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%86%99%E5%A5%BD%E7%9A%84sql%E8%BF%9B%E8%A1%8C%E6%89%B9%E9%87%8F%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%8B%BC%E6%8E%A5/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                                </span>
+                            </footer>
+                        </div>
+                    </article>
+                
+            
+                
+                    <article class="kratos-hentry clearfix">
+                        <div class="kratos-entry-border-new clearfix">
+                            
+                            <div class="kratos-entry-thumb-new">
                                 <a href="/2020/12/15/%E6%89%B9%E9%87%8F%E5%AF%B9%E5%AD%97%E6%AE%B5%E7%94%9F%E6%88%90JSON%E6%A0%BC%E5%BC%8F/">
                                     
                                         <img class="kratos-entry-thumb-new-img">
@@ -199,74 +238,6 @@ Quick Sta...
                     </article>
                 
             
-                
-                    <article class="kratos-hentry kratos-entry-border-new clearfix">
-                        <div class="kratos-status">
-                            
-                                <i class="fa fa-refresh"></i>
-                            
-                            <div class="kratos-status-inner">
-                                <div class="kratos-status-content">
-                                    
-                                        <h1 id="对数据库写好的sql进行批量格式的拼接"><a href="#对数据库写好的sql进行批量格式的拼接" class="headerlink" title="对数据库写好的sql进行批量格式的拼接"></a>对数据库写好的sql进行批量格式的拼接</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">readBatchSql</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">new</span> readBatchSql().test(<span class="string">&quot;C:\\Users\\tingfeng\\Desktop\\111.txt&quot;</span>, <span class="string">&quot;C:\\Users\\tingfeng\\Desktop\\2.txt&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">(String inputPath, String outputPath)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">		String path = inputPath;</span><br><span class="line"></span><br><span class="line">		FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(path);</span><br><span class="line">		BufferedReader bufferedReader = <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(fileInputStream));</span><br><span class="line"></span><br><span class="line">		String line = <span class="keyword">null</span>;</span><br><span class="line">	</span><br><span class="line">		<span class="keyword">while</span> ((line = bufferedReader.readLine()) != <span class="keyword">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">			File file = <span class="keyword">new</span> File(outputPath);</span><br><span class="line">			FileOutputStream fileOutputStream = <span class="keyword">new</span> FileOutputStream(file, <span class="keyword">true</span>);</span><br><span class="line">			StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">			</span><br><span class="line">			sb.append(<span class="string">&quot;de.addSql(\&quot;  &quot;</span>);</span><br><span class="line">			sb.append(line);</span><br><span class="line">			sb.append(<span class="string">&quot;    \&quot;);&quot;</span>);</span><br><span class="line">			</span><br><span class="line">			fileOutputStream.write(sb.toString().getBytes());</span><br><span class="line">			fileOutputStream.write(<span class="string">&quot;\r\n&quot;</span>.getBytes());</span><br><span class="line"></span><br><span class="line">			fileOutputStream.close();</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		fileInputStream.close();</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// TODO Auto-generated method stub</span></span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">super</span>.toString();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-                                    
-                                </div>
-                            </div>
-                        </div>
-                        
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2020-12-15</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    
-                                </span>
-                            </footer>
-                        
-                    </article>
-                
-            
-                
-                    <article class="kratos-hentry clearfix">
-                        <div class="kratos-entry-border-new clearfix">
-                            
-                            <div class="kratos-entry-thumb-new">
-                                <a href="/2020/12/14/hello-world%20-%20%E5%89%AF%E6%9C%AC/">
-                                    
-                                        <img class="kratos-entry-thumb-new-img">
-                                    
-                                </a>
-                            </div>
-                            <div class="kratos-post-inner-new">
-                                <header class="kratos-entry-header-new">
-                                        
-                                    <h2 class="kratos-entry-title-new"><a href="/2020/12/14/hello-world%20-%20%E5%89%AF%E6%9C%AC/">Hello World 1111111</a>
-                                </header>
-                                <div class="kratos-entry-content-new">
-                                    <p>
-                                        
-                                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using ...
-                                        
-                                    </p>
-                                </div>
-                            </div>
-                            <footer class="kratos-post-meta-new">
-                                <span class="pull-left">
-                                    <a><i class="fa fa-calendar"></i></a><a>2020-12-14</a>
-                                    <a><i class="fa fa-tags"></i></a>
-                                    
-                                </span>
-                                <span class="pull-right">
-                                    <a class="read-more" href="/2020/12/14/hello-world%20-%20%E5%89%AF%E6%9C%AC/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-                                </span>
-                            </footer>
-                        </div>
-                    </article>
-                
-            
             
             
         </section>
@@ -306,6 +277,12 @@ Quick Sta...
         
           
           
+            <a class="list-group-item" href="/2020/12/15/%E5%AF%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E5%86%99%E5%A5%BD%E7%9A%84sql%E8%BF%9B%E8%A1%8C%E6%89%B9%E9%87%8F%E6%A0%BC%E5%BC%8F%E7%9A%84%E6%8B%BC%E6%8E%A5/"><i class="fa  fa-book"></i> 对数据库写好的sql进行批量格式的拼接</a>
+            
+          
+        
+          
+          
             <a class="list-group-item" href="/2020/12/15/%E6%89%B9%E9%87%8F%E5%AF%B9%E5%AD%97%E6%AE%B5%E7%94%9F%E6%88%90JSON%E6%A0%BC%E5%BC%8F/"><i class="fa  fa-book"></i> 批量对字段生成JSON格式</a>
             
           
@@ -313,15 +290,6 @@ Quick Sta...
           
           
             <a class="list-group-item" href="/2020/12/15/%E6%89%B9%E9%87%8Fset%20get%20%E8%B5%8B%E5%80%BC/"><i class="fa  fa-book"></i> 批量set get 赋值</a>
-            
-          
-        
-          
-          
-        
-          
-          
-            <a class="list-group-item" href="/2020/12/14/hello-world%20-%20%E5%89%AF%E6%9C%AC/"><i class="fa  fa-book"></i> Hello World 1111111</a>
             
           
         
